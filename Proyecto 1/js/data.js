@@ -8,7 +8,7 @@ export const eventData = [
       capacity: 500,
       registeredCount: 250,
       category: 'Tecnología',
-      image: 'ahttps://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg'
+      image: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg'
     },
     {
       id: '2',
@@ -19,7 +19,7 @@ export const eventData = [
       capacity: 1000,
       registeredCount: 750,
       category: 'Musica',
-      image: 'ahttps://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg'
+      image: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg'
     },
     {
       id: '3',
@@ -29,7 +29,7 @@ export const eventData = [
       location: 'Campo Ferial de Ica',
       capacity: 300,
       registeredCount: 150,
-      category: 'Alimentos y Bebidas',
-      image: 'ahttps://images.pexels.com/photos/541216/pexels-photo-541216.jpeg'
+      category: 'Alimentos',
+      image: 'https://images.pexels.com/photos/541216/pexels-photo-541216.jpeg'
     }
   ];
