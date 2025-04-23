@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .barra-navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-top: 1%;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .menu button,
+  .menu select {
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu select {
+    background-color: white;
+    color: black;
+  }
+  
+  .contenedor-eventos {
+    padding: 20px;
+  }
+  
+  .evento {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .evento h3 {
+    margin: 0 0 5px 0;
+  }
+  
+  .evento p {
+    margin: 4px 0;
+  }
+  
+  .evento button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .evento button.cancelar {
+    background-color: #dc3545;
+  }
+
+  .crear-evento {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  
+  .crear-evento form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .crear-evento input,
+  .crear-evento select,
+  .crear-evento button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .crear-evento button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .container {
+    width: 80%; /* Opcional, para asegurarte que ocupe todo el ancho disponible */
+    height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }

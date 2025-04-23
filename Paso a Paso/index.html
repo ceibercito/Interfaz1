@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Interactivos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header container" role="banner">
+      <div class="logo-container">
+        <img src="/Paso a Paso/public/images/logo.png" alt="Logo de Eventos Interactivos" class="logo-img" />
+      </div>
+      <div class="logo">🎉 Eventos Interactivos</div>
+      <nav class="main-nav">
+        <button id="btnInicio" class="nav-btn">Inicio</button>
+        <button id="btnMisEventos" class="nav-btn">Mis Eventos</button>
+        <select id="filtroCategoria" aria-label="Filtrar por categoría">
+          <option value="">Todas las categorías</option>
+          <option value="tech">Tech</option>
+          <option value="negocios">Negocios</option>
+          <option value="educacion">Educación</option>
+        </select>
+      </nav>
+    </header>
+
+    <main class="container" role="main">
+      <section class="crear-evento">
+        <h2>➕ Crear nuevo evento</h2>
+        <form id="formCrearEvento">
+          <input
+            type="text"
+            id="nombreEvento"
+            placeholder="Nombre del evento"
+            required
+          />
+          <input type="date" id="fechaEvento" required />
+          <input
+            type="text"
+            id="ubicacionEvento"
+            placeholder="Ubicación"
+            required
+          />
+          <select id="categoriaEvento" required>
+            <option value="">Categoría</option>
+            <option value="tech">Tech</option>
+            <option value="negocios">Negocios</option>
+            <option value="educacion">Educación</option>
+          </select>
+          <button type="submit">Crear Evento</button>
+        </form>
+      </section>
+      <section id="listaEventos" class="event-list" aria-live="polite">
+        <!-- Aquí se renderizan los eventos dinámicamente -->
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Eventos Interactivos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

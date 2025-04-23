@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Eventos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Gestor de Eventos</h1>
+  </header>
+
+  <main>
+    <section id="event-filters">
+      <input type="text" id="search" placeholder="Buscar evento por nombre o categoría">
+    </section>
+
+    <section id="add-event-form">
+      <h2>Crear nuevo evento</h2>
+      <form id="form-nuevo-evento">
+        <input type="text" id="nombre" placeholder="Nombre del evento" required>
+        <input type="date" id="fecha" required>
+        <input type="text" id="ubicacion" placeholder="Ubicación" required>
+        <input type="text" id="categoria" placeholder="Categoría" required>
+        <button type="submit">Agregar Evento</button>
+      </form>
+    </section>
+
+    <section id="events-list">
+      <!-- Eventos renderizados aquí -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Empresa de Organización de Eventos</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
