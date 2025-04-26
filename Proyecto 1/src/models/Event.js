@@ -11,6 +11,20 @@ export class Event {
     this.image = data.image;
   }
 
+  toJSON() {
+    return {
+      id: this.id,
+      title: this.title,
+      description: this.description,
+      date: this.date,
+      location: this.location,
+      capacity: this.capacity,
+      registeredCount: this.registeredCount,
+      category: this.category,
+      image: this.image
+    };
+  }
+
   isAtCapacity() {
     return this.registeredCount >= this.capacity;
   }
@@ -22,7 +36,7 @@ export class Event {
       day: 'numeric',
     });
   }
-
+  
   register() {
     if (!this.isAtCapacity()) {
       this.registeredCount++;

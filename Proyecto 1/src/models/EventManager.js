@@ -1,9 +1,27 @@
 import { Event } from './Event';
 
+const STORAGE_KEY = 'event-manager-events';
+
 export class EventManager {
   constructor(eventData) {
     this.events = eventData.map(data => new Event(data));
     this.registeredEventIds = new Set();
+    const storedEvents = this.loadEventsFromStorage();
+    this.events = storedEvents.length > 0 
+      ? storedEvents.map(data => new Event(data))
+      : eventData.map(data => new Event(data));
+    this.registeredEventIds = new Set();
+    
+    this.saveEventsToStorage();
+  }
+
+  loadEventsFromStorage() {
+    const storedData = localStorage.getItem(STORAGE_KEY);
+    return storedData ? JSON.parse(storedData) : [];
+  }
+
+  saveEventsToStorage() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(this.events));
   }
 
   getAllEvents() {
@@ -23,11 +41,23 @@ export class EventManager {
     });
   }
 
+  createEvent(eventData) {
+    const newEvent = new Event({
+      id: (this.events.length + 1).toString(),
+      registeredCount: 0,
+      ...eventData
+    });
+    this.events.push(newEvent);
+    this.saveEventsToStorage();
+    return newEvent;
+  }
+
   registerForEvent(eventId) {
     const event = this.events.find(e => e.id === eventId);
     if (event && !event.isAtCapacity()) {
       event.register();
       this.registeredEventIds.add(eventId);
+      this.saveEventsToStorage();
     }
   }
 
@@ -36,6 +66,7 @@ export class EventManager {
     if (event) {
       event.unregister();
       this.registeredEventIds.delete(eventId);
+      this.saveEventsToStorage();
     }
   }
 

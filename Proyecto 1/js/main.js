@@ -90,7 +90,9 @@ class App {
   }
 
   createEventCard(event) {
+    
     const isRegistered = this.eventManager.isRegisteredForEvent(event.id);
+    
     const card = document.createElement('div');
     card.className = 'event-card';
     
